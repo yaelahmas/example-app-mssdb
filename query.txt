@@ -1,0 +1,11 @@
+1.Buatkan query jika kita ingin memanggil data berdasarkan kode "K003" dengan range waktu antara 01 Juni 2024 s/d 30 Januari 2025
+SELECT *
+FROM t_transaksi
+WHERE t_komoditas_kode = 'K003'
+AND tanggal_type BETWEEN '2024-06-01' AND '2025-01-30';
+
+2.Summary hasil pada field produksi dengan kode "K004" dengan query
+SELECT t_komoditas_kode, SUM(produksi) AS total_produksi
+FROM t_transaksi
+WHERE t_komoditas_kode = 'K004'
+GROUP BY t_komoditas_kode;
