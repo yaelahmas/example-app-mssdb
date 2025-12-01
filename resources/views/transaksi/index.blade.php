@@ -42,7 +42,7 @@
                                 @forelse($transaksi as $t)
                                 <tr>
                                     <td>{{ $t->tanggal_type }}</td>
-                                    <td>{{ $t->komoditas->t_komoditas_nama }}</td>
+                                    <td>{{ $t->komoditas->nama }}</td>
                                     <td>{{ number_format($t->produksi) }}</td>
                                     <td>
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('transaksi.destroy', $t->id) }}" method="POST">
