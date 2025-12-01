@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KomoditasController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,3 +10,4 @@ Route::get('/', function () {
 
 
 Route::resource('komoditas', KomoditasController::class);
+Route::resource('transaksi', TransaksiController::class);

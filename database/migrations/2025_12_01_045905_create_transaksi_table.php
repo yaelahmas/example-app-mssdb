@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('tanggal_type')->unique();
             $table->string('t_komoditas_kode');
-            $table->integer('produksi');
+            $table->bigInteger('produksi');
             $table->timestamps();
 
             $table->foreign('t_komoditas_kode')->references('t_komoditas_kode')->on('t_komoditas');
